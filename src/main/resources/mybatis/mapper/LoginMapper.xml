@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maple.task.dao.LoginMapper">
+    <insert id="insertUser" parameterType="com.maple.task.beans.User">
+        INSERT INTO user(username, password)
+        VALUES (#{username},#{password})
+    </insert>
+    <select id="selectUserByName" resultType="com.maple.task.beans.User" parameterType="java.lang.String">
+        SELECT uid,username,password
+        FROM user
+        WHERE username=#{0}
+    </select>
+</mapper>

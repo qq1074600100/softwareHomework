@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${session.user eq null}">
+    <a th:href="@{/login}">登录</a> <a th:href="@{/register}">注册</a>
+</div>
+<div th:include="header::#head2"></div>
+<h1>Task System</h1>
+欢迎！！！
+</body>
+</html>
